@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" href="api.quotable.io"> -->
+    <title>todo List</title>
+</head>
+
+<body>
+    <div id="whole">
+        <div class="container" id="button-add">
+            <button type="button" class="btn btn-primary mt-2 mx-auto d-flex" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <i class="bi bi-plus-lg"></i>
+                Add Task
+            </button>
+        </div>
+        <div class="container mt-4">
+            <div class="container-md ">
+                <div class="card  ">
+                    <div class="card-body">
+                        <h5 class="card-title">DO IT NOW</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Urgent and Important</h6>
+                        <ol type="i" id="urg-imp-task" class="tsk">
+                            <!-- <li id="task1">
+                                <div class="card-text d-flex container">
+                                    <p class="col-11">Some quick example text to build on the card title and
+                                        make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#" onclick="rpove(this)" id="1" class="rpove-parent nav-link ms-auto"><i
+                                            class="bi bi-trash3"></i></a>
+                                </div>
+                            </li> -->
+                        </ol>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class=" card-body">
+                        <h5 class="card-title">PLAN IT</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">not Urgent and Important</h6>
+                        <ol type="i" id="imp-task" class="tsk">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="container-md">
+                <div class="card">
+                    <div class=" card-body">
+                        <h5 class="card-title">DELEGATE</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Urgent and not Important</h6>
+                        <ol type="i" id="urg-task" class="tsk">
+                        </ol>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class=" card-body">
+                        <h5 class="card-title">DROP IT</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">not Urgent and not Important</h6>
+                        <ol type="i" id="task" class="tsk">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="quote title text-center">
+        -: <u>Inspirational Quote</u> :-
+    </div>
+    <div class="container inspirational-quote " >
+        <p class="text-muted fst-italic text-center" id="quote-content"></p>
+        <p class="text-muted fst-italic text-end" id="quote-author"></p>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Write your task</label>
+                        <textarea class="form-control" id="Ta1" rows="3"></textarea>
+                    </div>
+                    <div class="container mt-2 d-flex">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="imp-checkbox">
+                            <label class="form-check-label" for="imp-checkbox">
+                                Mark as Important
+                            </label>
+                        </div>
+                        <div class="form-check ms-auto">
+                            <input class="form-check-input" type="checkbox" value="" id="urg-checkbox" checked>
+                            <label class="form-check-label" for="urg-checkbox">
+                                Mark as Urgent
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" onclick="save()" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

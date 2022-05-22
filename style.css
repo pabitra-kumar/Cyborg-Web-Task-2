@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.quote{
+    color: brown;
+    text-align: center;
+    font-style: italic;
+}
+
+.tsk {
+     max-height : 29vh;
+    overflow: auto;
+}
