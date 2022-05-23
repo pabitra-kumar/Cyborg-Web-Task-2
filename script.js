@@ -30,6 +30,19 @@
     }
 getquote();
 
+ function loadQuote(a){
+     htm = '<div class="spinner-border" role="status">\
+     <span class="visually-hidden">Loading...</span>\
+   </div>';
+   a.innerHTML.remove;
+   a.innerHTML = htm;
+   console.log(a);
+   setTimeout(getquote,1000);
+   setTimeout(load,1000);
+ }
+ function load(){
+    document.getElementById("jack").innerHTML = '<i class="bi bi-arrow-clockwise "></i>';
+ }
 var a = 1;
 function save() {
     var urg = false, imp = false;
